@@ -9,20 +9,105 @@
 </head>
 <body>
 <form >
+<form method="GET" action="https://www.randyconnolly.com/tests/process.php">
+
 <fieldset>
    <legend>Advanced Art Work Search</legend>
-   
-    <div id="searchBox">
-     
-    </div>   
-    <div id="settingsBox">
 
+   <!-- SEARCH AREA -->
+   <div id="searchBox">
+      <label for="search">Search</label>
+      <input type="text" id="search" name="search" placeholder="Enter search terms">
 
-    </div>
-    <div id="paintingBox">
+      <div class="radioGroup">
+         <input type="radio" id="title" name="searchBy" value="title" checked>
+         <label for="title">Title</label>
 
-    </div> 
-</fieldset>  
+         <input type="radio" id="artist" name="searchBy" value="artist">
+         <label for="artist">Artist</label>
+
+         <input type="radio" id="description" name="searchBy" value="description">
+         <label for="description">Description</label>
+      </div>
+   </div>
+
+   <!-- SETTINGS AREA -->
+   <div id="settingsBox">
+      <label for="genre">Genre</label>
+      <select name="genre" id="genre">
+         <option value="0">Select Genre</option>
+         <option value="1">Baroque</option>
+         <option value="2">Renaissance</option>
+         <option value="3">Realism</option>
+      </select>
+
+      <label for="action">Bulk Actions</label>
+      <select name="action" id="action">
+         <option value="0">Select Action</option>
+         <option value="1">Archive</option>
+         <option value="2">Edit</option>
+         <option value="3">Delete</option>
+         <option value="4">Collection</option>
+      </select>
+
+      <input type="submit" value="Apply">
+   </div>
+
+   <!-- PAINTINGS TABLE -->
+   <div id="paintingBox">
+      <table>
+         <caption>Paintings</caption>
+
+         <thead>
+            <tr>
+               <th></th>
+               <th>Title</th>
+               <th>Artist</th>
+               <th>Year</th>
+               <th>Genre</th>
+               <th></th>
+            </tr>
+         </thead>
+
+         <tbody>
+            <tr>
+               <td><input type="checkbox" name="index[]" value="10"></td>
+               <td>Starry Night</td>
+               <td>Vincent van Gogh</td>
+               <td>1889</td>
+               <td>Post-Impressionism</td>
+               <td>
+                  <button type="button">Edit</button>
+                  <button type="button">Delete</button>
+               </td>
+            </tr>
+
+            <tr>
+               <td><input type="checkbox" name="index[]" value="11"></td>
+               <td>Mona Lisa</td>
+               <td>Leonardo da Vinci</td>
+               <td>1503</td>
+               <td>Renaissance</td>
+               <td>
+                  <button type="button">Edit</button>
+                  <button type="button">Delete</button>
+               </td>
+            </tr>
+
+            <tr>
+               <td><input type="checkbox" name="index[]" value="12"></td>
+               <td>The Night Watch</td>
+               <td>Rembrandt</td>
+               <td>1642</td>
+               <td>Baroque</td>
+               <td>
+                  <button type="button">Edit</button>
+                  <button type="button">Delete</button>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+
+</fieldset>
 </form>
-</body>
-</html>

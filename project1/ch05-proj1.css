@@ -38,6 +38,52 @@ section h3 {
 
 
 /* table formatting -- you will add these */
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 1em;
+}
 
+caption {
+   caption-side: top;
+   font-weight: bold;
+   padding: 0.5em;
+}
+
+th, td {
+   padding: 0.75em;
+   text-align: left;
+}
+
+thead {
+   background-color: #37474F;
+   color: white;
+}
+
+tbody tr:nth-child(even) {
+   background-color: #f5f5f5;
+}
+
+tbody tr:hover {
+   background-color: #CFD8DC;
+}
+
+td {
+   border-bottom: 1px solid #ddd;
+}
+
+fieldset {
+   margin: 1em;
+   padding: 1em;
+   border: 1px solid #ccc;
+}
+
+legend {
+   font-weight: bold;
+}
+
+input[type="text"], select {
+   padding: 0.4em;
+}
 
 
